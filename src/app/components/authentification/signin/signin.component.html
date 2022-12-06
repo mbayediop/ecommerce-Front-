@@ -1,0 +1,24 @@
+<div class="demo-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
+        <!--<div class="text-center pb-5"> <img src="/assets/image/logo-BF.jpg"> </div> -->
+        <div class="p-5 bg-white rounded shadow-lg">
+          <h2 class="mb-2 text-center">Se Connecter</h2>
+
+          <form [formGroup]="signinForm">
+            <label class="font-500">Email</label>
+            <input name="" class="form-control form-control-lg mb-3" type="email" [formControl]="email">
+            <label class="font-500">Mot de passe</label>
+            <input name="" class="form-control form-control-lg" type="password" [formControl]="mot_passe">
+            <p class="m-0 py-4"><a href="" class="text-muted">Mot de passe oublier ?</a></p>
+            <button class="btn btn-success btn-lg w-100 shadow-lg" (click)="connecter()" routerLink="/user">Se connecter</button>
+          </form>
+          <div class="text-center pt-4">
+            <p class="m-0">Vous n'avez pas de compte ?   <a class="text-dark font-weight-bold" routerLink="/signup">  S'inscrire</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

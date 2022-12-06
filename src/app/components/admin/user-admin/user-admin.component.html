@@ -1,0 +1,69 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <h3 class="card-title text-uppercase mb-0">Gestion des Utilisateurs</h3>
+            </div>
+            <div class="col-4">
+              <div class="row">
+                <div class="col-4">
+                  <h3 class="card-title  mb-0">Ajout Utilisateur</h3>
+                </div>
+                <div class="col-4">
+                  <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="table-responsive">
+          <table class="table no-wrap user-table mb-0">
+            <thead>
+            <tr>
+              <th scope="col" class="border-0 text-uppercase font-medium">Prenom</th>
+              <th scope="col" class="border-0 text-uppercase font-medium">Nom</th>
+              <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+              <th scope="col" class="border-0 text-uppercase font-medium">Identifiant</th>
+              <th scope="col" class="border-0 text-uppercase font-medium">Profit</th>
+              <th scope="col" class="border-0 text-uppercase font-medium">Manage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of users ">
+              <td>
+                <span class="text-muted" >{{user.prenom}}</span>
+              </td>
+              <td>
+                <span class="text-muted">{{user.nom}}</span>
+
+              </td>
+              <td>
+                <span class="text-muted">{{user.email}}</span>
+              </td>
+              <td>
+                <span class="text-muted">{{user.identifiant}}</span>
+              </td>
+              <td>
+                <span class="text-muted">Admin</span><br>
+
+              </td>
+              <td>
+                <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button> -->
+                <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+                <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="OnDeleteUser(user.id)"><i class="fa fa-trash"></i></button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

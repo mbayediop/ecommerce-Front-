@@ -1,0 +1,17 @@
+ <div class="card">
+      <img src="/assets/image/ex1.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Modele de l'article</h5>
+        <div class="article-nom">
+          <h3>Nom: {{article?.nomArticle}}</h3>
+        </div>
+        <div class="article-prix">
+          <h3>Prix: {{article?.prixArticle}} CFA</h3>
+        </div>
+        <p class="card-text">Description: {{article?.descriptionArticle}}</p>
+        <p class="card-text">Mise à jour le {{article?.dateCreationArticle | date}}</p>
+
+        <a href="#" class="btn btn-secondary">Commander</a>
+      </div>
+    </div>
+

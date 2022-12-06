@@ -1,0 +1,29 @@
+<div class="demo-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
+        <div class="p-5 bg-white rounded shadow-lg">
+          <h2 class="mb-4 text-center">Inscription</h2>
+          <form class="formulaire" [formGroup]="signupForm">
+            <label class="font-500">Prenom</label>
+            <input name="" [formControl]="prenom" class="form-control form-control-lg mb-3">
+            <label class="font-500" >Nom</label>
+            <input name="" class="form-control form-control-lg mb-3" [formControl]="nom">
+            <label class="font-500">Email</label>
+            <input name="" class="form-control form-control-lg mb-3" type="email" [formControl]="email">
+            <label class="font-500" >Identifiant</label>
+            <input name="" class="form-control form-control-lg mb-3" [formControl]="identifiant">
+            <label class="font-500"[formControl]="mot_passe">Mot de passe</label>
+            <input name="" class="form-control form-control-lg" type="password"[formControl]="mot_passe">
+            <label class="font-500">Confirmer Mot de passe</label>
+            <input name="" class="form-control form-control-lg" type="password">
+            <div class="btn-signin">
+              <button class="btn btn-success btn-lg w-100 shadow-lg" (click)="soumettre()">S'inscrire</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.navbar{
+  background-color: #F0C300;
+}
+
+.navbar-collapse{
+justify-content: flex-end;
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.container-fluid .logo {
+
+}
