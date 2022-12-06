@@ -11,6 +11,9 @@ export class ArticleListeComponent implements OnInit {
 
   articles: Article []=[];
 
+  afficherModal: boolean= false
+  modalArticle: Article | undefined
+
   constructor(private service: ArticleService) { }
 
   ngOnInit(): void {
@@ -30,4 +33,16 @@ export class ArticleListeComponent implements OnInit {
     console.log(this.articles)
   }
 
+  afficherArticleModal(article: Article){
+
+    if (article){
+      this.afficherModal= true
+      this.modalArticle= article
+    }
+  }
+
+  fermerArticleModal(){
+    this.afficherModal= false
+    this.modalArticle= undefined
+  }
 }

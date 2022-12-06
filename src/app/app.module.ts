@@ -18,6 +18,7 @@ import {RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routing";
 import {HttpClientModule} from "@angular/common/http";
 import {UserAdminComponent} from "./components/admin/user-admin/user-admin.component";
+import { ModalArticleViewComponent } from './components/modal-article-view/modal-article-view.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {UserAdminComponent} from "./components/admin/user-admin/user-admin.compo
     FooterComponent,
     SigninComponent,
     SignupComponent,
-    HeaderComponent
+    HeaderComponent,
+    ModalArticleViewComponent
   ],
   imports: [
     BrowserModule,

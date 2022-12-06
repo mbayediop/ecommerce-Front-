@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Article} from "../../models/article.model";
 
 @Component({
@@ -12,6 +12,8 @@ export class ArticleItemComponent implements OnInit {
 
   @Input() article: Article | undefined;
 
+  @Output() afficherModalArticleView: EventEmitter<Article>= new EventEmitter<Article>()
+
   constructor() { }
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class ArticleItemComponent implements OnInit {
   afficheArticle(article: Article | undefined){
 
     console.log(article)
+    this.afficherModalArticleView.emit(article)
 
   }
 

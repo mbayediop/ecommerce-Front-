@@ -1,17 +1,36 @@
- <div class="card">
-      <img src="/assets/image/ex1.webp" class="card-img-top" alt="...">
+<!-- <div class="card">
+      <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Modele de l'article</h5>
         <div class="article-nom">
-          <h3>Nom: {{article?.nomArticle}}</h3>
+          <h5>Nom: {{article?.nomArticle}}</h5>
         </div>
         <div class="article-prix">
-          <h3>Prix: {{article?.prixArticle}} CFA</h3>
+          <h4>Prix: {{article?.prixArticle}} CFA</h4>
         </div>
         <p class="card-text">Description: {{article?.descriptionArticle}}</p>
         <p class="card-text">Mise à jour le {{article?.dateCreationArticle | date}}</p>
 
         <a href="#" class="btn btn-secondary">Commander</a>
       </div>
-    </div>
+    </div>-->
+
+
+ <div class="card product_item" (click)="afficheArticle(article)">
+   <div class="body">
+     <div class="cp_img">
+       <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Product" class="img-fluid">
+       <div class="hover">
+         <a href="javascript:void(0);" class="btn btn-primary btn-sm waves-effect"><i class="zmdi zmdi-plus"></i></a>
+         <a href="javascript:void(0);" class="btn btn-primary btn-sm waves-effect"><i class="zmdi zmdi-shopping-cart"></i></a>
+       </div>
+     </div>
+     <div class="product_details">
+       <h5><a href="ec-product-detail.html">{{article?.nomArticle}}</a></h5>
+       <ul class="product_price list-unstyled">
+         <li class="new_price">Prix: {{article?.prixArticle}} CFA</li>
+         <li class="old_price">Date: {{article?.dateCreationArticle | date}} CFA</li>
+       </ul>
+     </div>
+   </div>
+ </div>
 
