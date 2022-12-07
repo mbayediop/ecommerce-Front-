@@ -7,14 +7,14 @@
         <div class="card-body">
           <div class="row">
             <div class="col-6">
-              <h3 class="card-title text-uppercase mb-0">Gestion des Utilisateurs</h3>
+              <h4 class="card-title text-uppercase mb-0">Gestion des Utilisateurs</h4>
             </div>
             <div class="col-6">
               <div class="row">
                 <div class="col-4">
-                  <h3 class="card-title text-uppercase mb-0">Ajout Utilisateur</h3>
+                  <h4 class="card-title">Ajout Utilisateur</h4>
                 </div>
-                <div class="col-2">
+                <div class="col-2" (click)="ajouterUser()">
                   <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button>
                 </div>
               </div>
@@ -22,46 +22,85 @@
 
 
           </div>
-
         </div>
         <div class="table-responsive">
-          <table class="table no-wrap user-table mb-0">
-            <thead>
-            <tr>
-              <th scope="col" class="border-0 text-uppercase font-medium">Prenom</th>
-              <th scope="col" class="border-0 text-uppercase font-medium">Nom</th>
-              <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
-              <th scope="col" class="border-0 text-uppercase font-medium">Identifiant</th>
-              <th scope="col" class="border-0 text-uppercase font-medium">Profit</th>
-              <th scope="col" class="border-0 text-uppercase font-medium">Manage</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let user of users ">
-              <td>
-                <span class="text-muted" >{{user.prenom}}</span>
-              </td>
-              <td>
-                <span class="text-muted">{{user.nom}}</span>
+          <div class="adduser" *ngIf="afficherModal">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="add"><h4>Renseigner les informations de l'utilisateur</h4></div>
+              <form class="row g-3" [formGroup]="signupForm">
+                <div class="col-md-12">
+                  <label for="validationDefault01" class="form-label">Prenom</label>
+                  <input type="text" class="form-control" id="validationDefault01"  required [formControl]="prenom">
+                </div>
+                <div class="col-md-12">
+                  <label for="validationDefault02" class="form-label">Nom</label>
+                  <input type="text" class="form-control" id="validationDefault02"  required [formControl]="nom">
+                </div>
+                <div class="col-md-12">
+                  <label for="validationDefaultUsername" class="form-label">Identifiant</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required [formControl]="identifiant">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="exampleFormControlInput1" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" [formControl]="email">
+                </div>
+                <div class="col-md-12">
+                  <label for="inputPassword" class="form-label">Mot de passe</label>
+                  <input type="password" class="form-control" id="inputPassword" [formControl]="mot_passe">
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="col">
+                    <button class="btn btn-primary" type="submit" (click)="soumettre() ">Ajout</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-primary" type="submit" (click)="fermerArticleModal()" >Fermer</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="listusers" *ngIf="!afficherListUser">
+            <table class="table no-wrap user-table mb-0">
+              <thead>
+              <tr>
+                <th scope="col" class="border-0 text-uppercase font-medium">Prenom</th>
+                <th scope="col" class="border-0 text-uppercase font-medium">Nom</th>
+                <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
+                <th scope="col" class="border-0 text-uppercase font-medium">Identifiant</th>
+                <th scope="col" class="border-0 text-uppercase font-medium">Profit</th>
+                <th scope="col" class="border-0 text-uppercase font-medium">Manage</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of users ">
+                <td>
+                  <span class="text-muted" >{{user.prenom}}</span>
+                </td>
+                <td>
+                  <span class="text-muted">{{user.nom}}</span>
 
-              </td>
-              <td>
-                <span class="text-muted">{{user.email}}</span>
-              </td>
-              <td>
-                <span class="text-muted">{{user.identifiant}}</span>
-              </td>
-              <td>
-                <span class="text-muted">Admin</span><br>
+                </td>
+                <td>
+                  <span class="text-muted">{{user.email}}</span>
+                </td>
+                <td>
+                  <span class="text-muted">{{user.identifiant}}</span>
+                </td>
+                <td>
+                  <span class="text-muted">Admin</span><br>
 
-              </td>
-              <td>
-                <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button> -->
-                <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
-                <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="OnDeleteUser(user.id)"><i class="fa fa-trash"></i></button>
-              </td>
-            </tr>            </tbody>
-          </table>
+                </td>
+                <td>
+                  <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-upload"></i> </button> -->
+                  <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
+                  <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="OnDeleteUser(user.id)"><i class="fa fa-trash"></i></button>
+                </td>
+              </tr>            </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

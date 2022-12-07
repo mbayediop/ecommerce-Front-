@@ -7,6 +7,4 @@ export class Article {
   stockArticle?: number;
   dateCreationArticle?: Date;
   imageArticle?: string
-
-
 }

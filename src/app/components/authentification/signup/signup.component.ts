@@ -43,7 +43,8 @@ export class SignupComponent implements OnInit {
 
   soumettre(){
     console.log(this.signupForm.value);
-    this.service.adduser(this.signupForm.value).subscribe()
+    this.service.adduser(this.signupForm.value).subscribe();
+    this.signupForm.reset();
   }
 
 }

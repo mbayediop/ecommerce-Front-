@@ -34,7 +34,7 @@ import { ModalArticleViewComponent } from './components/modal-article-view/modal
     SigninComponent,
     SignupComponent,
     HeaderComponent,
-    ModalArticleViewComponent
+    ModalArticleViewComponent,
   ],
   imports: [
     BrowserModule,
