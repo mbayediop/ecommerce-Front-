@@ -1,0 +1,86 @@
+<main>
+  <div class="flex-shrink p-1 bg-white">
+    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+      <svg class="bi me-2" width="30" height="24">
+        <use xlink:href="#bootstrap"/>
+      </svg>
+      <img src="../../../../assets/image/logoBabsFashion/logo-babs-Fashion.png" style="height: 170px">
+    </a>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#dashboard-collapse" aria-expanded="false">
+          Dashboard
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Overview</a></li>
+            <li><a href="#" class="link-dark rounded">Weekly</a></li>
+            <li><a href="#" class="link-dark rounded">Monthly</a></li>
+            <li><a href="#" class="link-dark rounded">Annually</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#orders-collapse" aria-expanded="false">
+          Article
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a routerLink="/user" class="link-dark rounded">Tous les articles</a></li>
+            <li><a href="#" class="link-dark rounded">Categories des Articles</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#account-collapse" aria-expanded="false">
+          Parametrage Compte
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">Gestion des utilisateurs</a></li>
+            <li><a href="#" class="link-dark rounded">Profile</a></li>
+            <li><a href="#" class="link-dark rounded">Modifier mot de passe</a></li>
+            <li><a href="#" class="link-dark rounded">Deconnecter</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link active" aria-current="page" routerLink="">
+                <img src="../../../../assets/image/person-circle.svg">
+              </a>
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">Profit</button></li>
+              <li><button class="dropdown-item" type="button">Modifier mot de passe</button></li>
+              <li><button class="dropdown-item" type="button">Se deconnecter</button></li>
+            </ul>
+            </div>
+          </div>
+        </nav>
+
+    <section class="article">
+      <div class="article-titre">
+        <h2>La liste de tous les articles</h2>
+      </div>
+
+      <div class="article-recherche">
+        <form class="d-flex" role="search">
+          <input class="form-control me-1" type="search" placeholder="rechercher un article">
+          <button class="btn btn-outline-success" type="submit">Recherche</button>
+        </form>
+      </div>
+    <app-article-liste></app-article-liste>
+    </section>
+  </div>
+</main>
+

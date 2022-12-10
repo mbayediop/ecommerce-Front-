@@ -1,7 +1,6 @@
 import {Router, Routes} from "@angular/router";
 import {SigninComponent} from "./components/authentification/signin/signin.component";
 import {SignupComponent} from "./components/authentification/signup/signup.component";
-import {PageWebComponent} from "./components/page-web/page-web.component";
 import {SidebarsComponent} from "./components/admin/sidebars/sidebars.component";
 import {ContainerComponent} from "./components/container/container.component";
 

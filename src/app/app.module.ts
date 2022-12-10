@@ -18,7 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {UserAdminComponent} from "./components/admin/user-admin/user-admin.component";
 import { ModalArticleViewComponent } from './components/modal-article-view/modal-article-view.component';
 import { SidebarsComponent } from './components/admin/sidebars/sidebars.component';
-import { PageWebComponent } from './components/page-web/page-web.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { PageWebComponent } from './components/page-web/page-web.component';
     SignupComponent,
     ModalArticleViewComponent,
     SidebarsComponent,
-    PageWebComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,

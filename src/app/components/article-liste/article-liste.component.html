@@ -1,17 +1,3 @@
-<!--
-<div class="container text-center">
-  <div class="row">
-    <div class="col" *ngFor="let article of articles">
-      <app-article-item [article]="article"></app-article-item>
-    </div>
-</div>
-  <div class="notArticle" *ngIf="!articles.length">
-    Pas d'article disponible our le moment
-  </div>
-</div>
--->
-
-
 <div class="container">
   <div class="row clearfix">
     <div class="col-lg-3 col-md-4 col-sm-12" *ngFor="let article of articles">
@@ -23,7 +9,7 @@
     </div>
   </div>
   <div class="notArticle" *ngIf="!articles.length">
-    Pas d'article disponible our le moment
+    Pas d'article disponible pour le moment
   </div>
 
   <app-modal-article-view
@@ -31,7 +17,6 @@
     [article]="modalArticle"
     (close)="fermerArticleModal()"
   ></app-modal-article-view>
-
 </div>
 
 

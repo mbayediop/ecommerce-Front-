@@ -1,14 +1,12 @@
 .navbar{
   background-color: #F0C300;
-  min-height: 10vh;
+  height: 10vh;
 }
 
-.navbar-collapse{
-justify-content: flex-end;
-  padding: 1rem;
-  font-size: 18px;
+.container-fluid{
+  display: inline;
 }
 
-.container-fluid .logo {
-
+#navbarNavAltMarkup{
+  justify-content: flex-end;
 }
