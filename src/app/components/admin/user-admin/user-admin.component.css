@@ -38,33 +38,3 @@ body{
   max-width: 150px;
   border-radius: 20px;
 }
-
-/*add userformulaire
-.container{
-  height: 605px;
-  width: 670px;
-  background-color: white;
-  position: fixed;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-.overlay{
-  background-color: black;
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.6;
-}
-.add{
-  text-align: center;
-  margin: 2rem;
-}
-
-
-*/
-

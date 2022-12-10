@@ -1,5 +1,6 @@
 .navbar{
   background-color: #F0C300;
+  min-height: 10vh;
 }
 
 .navbar-collapse{

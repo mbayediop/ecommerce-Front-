@@ -1,8 +1,9 @@
 import {Router, Routes} from "@angular/router";
-import {ContainerComponent} from "./components/container/container.component";
 import {SigninComponent} from "./components/authentification/signin/signin.component";
 import {SignupComponent} from "./components/authentification/signup/signup.component";
-import { UserAdminComponent } from "./components/admin/user-admin/user-admin.component";
+import {PageWebComponent} from "./components/page-web/page-web.component";
+import {SidebarsComponent} from "./components/admin/sidebars/sidebars.component";
+import {ContainerComponent} from "./components/container/container.component";
 
 
 export const ROUTES : Routes = [
@@ -24,7 +25,7 @@ export const ROUTES : Routes = [
   },
   {
     path: "user",
-    component: UserAdminComponent,
+    component: SidebarsComponent,
     pathMatch: 'full'
   },
 ]
