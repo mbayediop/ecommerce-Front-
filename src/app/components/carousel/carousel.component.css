@@ -1,5 +1,6 @@
 .carousel{
   min-height: 10vh;
+  margin: auto;
 }
 .carousel-inner{
   padding: 1rem;

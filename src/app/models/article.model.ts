@@ -1,3 +1,5 @@
+import {CategoriesModel} from "./categories.model";
+
 export class Article {
   idArticle?: number;
   nomArticle?: string;
@@ -6,5 +8,6 @@ export class Article {
   descriptionArticle?: string;
   stockArticle?: number;
   dateCreationArticle?: Date;
-  imageArticle?: string
+  imageArticle?: string;
+  categorieId?: CategoriesModel;
 }

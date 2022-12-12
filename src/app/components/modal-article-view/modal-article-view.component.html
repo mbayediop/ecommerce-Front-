@@ -1,25 +1,31 @@
 <div class="modal-product-view">
   <div class="overlay"></div>
-  <div class="modal-product-view-container flex">
-    <div class="modal-product-view-image flex-1">
-      <img >
+  <div class="modal-product-view-container">
+    <div class="row">
+      <div class="col-4">
+        <div class="modal-product-view-image">
+          <img [src]="article?.imageArticle" [alt]="article?.nomArticle">
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="modal-product-view-details">
+          <h2>{{article?.nomArticle}}</h2>
+          <div class="modal-product-view-details-price">
+            <h5>Prix {{article?.prixArticle}} FCFA</h5>
+          </div>
+          <div class="modal-product-view-details-created-at">
+            <h5>Description:  {{article?.descriptionArticle}}</h5>
+            <h5>Nombre de stock:  {{article?.stockArticle}}</h5>
+            <h5>Date de Mise à jour {{article?.dateCreationArticle | date}}</h5>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="modal-product-view-details flex-1 flex aic jcc colum">
-      <h1>{{article?.nomArticle}}</h1>
-      <div class="modal-product-view-details-price">
-        <h2> Solde {{article?.oldPrixArticle}} FCFA</h2>
-        <del>Prix {{article?.prixArticle}} FCFA</del>
-      </div>
-      <div class="modal-product-view-details-created-at">
-        <h3>Description:  {{article?.descriptionArticle}}</h3>
-        <h3>Nombre de stock:  {{article?.stockArticle}}</h3>
-        <h3>Date de Mise à jour {{article?.dateCreationArticle | date}}</h3>
-      </div>
-
-
-      <button
-        (click)=fermerModal()
-        class="btn" >Fermer</button>
+      <div class="modal-product-view-button">
+        <button (click)=fermerModal() type="button" class="btn btn-dark">Fermer</button>
+        <button  type="button" class="btn btn-warning">Ajout</button>
     </div>
   </div>
 </div>
+
+
